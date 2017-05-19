@@ -17,10 +17,15 @@
 $bgDefault   : #DADFE1;
 $bgHighlight : #BDC3C7;
 $colDefault  : #F04155;
-$colHighlight: #3498DB;
+$colHighlight: #e74c3c;
+$white : #FFFFFF;
+
+body {
+  background-color:$bgDefault;
+}
 
 .navbar-default {
-  background-color: $bgDefault;
+  background-color: $white;
   border-color: $bgHighlight;
   .navbar-brand {
     color: $colDefault;
@@ -53,10 +58,10 @@ $colHighlight: #3498DB;
     border-color: $colDefault;
   }
   .btn-default {
-    color: $bgDefault;
+    color: $white;
     background-color: $colDefault;
     &:hover, &:focus {
-      background-color: $bgDefault;
+      background-color: $white;
       color: $colDefault;}}
   .navbar-link {
     color: $colDefault;
