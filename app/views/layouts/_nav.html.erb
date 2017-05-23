@@ -1,5 +1,9 @@
+<%-# Renders different navigation bars depending on if the user is signed in -%>
+
 <% if !user_signed_in? %>
+  <%-# Renders the guest nav bar found in views/layouts/_nav_guest -%>
   <%= render 'layouts/nav_guest' %>
 <% else %>
+  <%-# Renders the user nav bar found in views/layouts/_nav_user -%>
   <%= render 'layouts/nav_user' %>
 <% end %>

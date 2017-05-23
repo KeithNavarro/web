@@ -14,19 +14,27 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-$bgDefault   : #DADFE1;
-$bgHighlight : #BDC3C7;
-$colDefault  : #F04155;
-$colHighlight: #e74c3c;
+$bgDefault   : #1A1A1D;
+$bgHighlight : #C3073F;
+$colDefault  : #950740;
+$colHighlight: #C3073F;
 $white : #FFFFFF;
+$footerDefault: #4E4E50;
 
 body {
-  background-color:$bgDefault;
+  background-color: $white;
+}
+
+.body-footer {
+  background: linear-gradient($footerDefault, $bgDefault);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: $white;
 }
 
 .navbar-default {
-  background-color: $white;
-  border-color: $bgHighlight;
+  background-color: $bgDefault;
   .navbar-brand {
     color: $colDefault;
     &:hover, &:focus {
@@ -38,15 +46,15 @@ body {
       > a {
         color: $colDefault;
         &:hover,  &:focus {
-          color: $colHighlight; }}}
+          background-color: $bgDefault;
+          color: $colHighlight;}}}
     > .active {
       > a, > a:hover, > a:focus {
-        color: $colHighlight;
-        background-color: $bgHighlight; }}
+        background-color: $bgDefault; }}
     > .open {
       > a, > a:hover, > a:focus {
         color: $colHighlight;
-        background-color: $bgHighlight; }}}
+        background-color: $bgDefault; }}}
   .navbar-toggle {
     border-color: $bgHighlight;
     &:hover, &:focus {
@@ -67,6 +75,7 @@ body {
     color: $colDefault;
     &:hover {
       color: $colHighlight; }}}
+      
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu {
     > li > a {
@@ -78,4 +87,3 @@ body {
         color: $colHighlight;
         background-color: $bgHighlight; }}}
 }
-
