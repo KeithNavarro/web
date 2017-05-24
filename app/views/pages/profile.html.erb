@@ -1,1 +1,26 @@
-profile
+<div class='row'>
+    <div class='col-xs-3'>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <p>Profile</p>
+          </div>
+        </div>
+    </div>
+    <div class='col-xs-6'>
+      <%= render '/components/post_form' %>
+        <% for @p in @posts %>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <p><%= @p.content %></p>
+          </div>
+        </div>
+        <% end %>
+    </div>
+    <div class='col-xs-3'>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <p>Profile</p>
+          </div>
+        </div>
+    </div>
+</div>
