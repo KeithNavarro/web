@@ -1,2 +1,14 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<% if !user_signed_in? %>
+    <style>
+        body {
+            background: linear-gradient(
+                rgba(0,0,0,0.4),
+                rgba(0,0,0,0.4)) , url("/fidget-spinner-black.jpg") no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+        }
+    </style>
+<% else %>
+    <script>document.location = "/home"</script>
+<% end %>
