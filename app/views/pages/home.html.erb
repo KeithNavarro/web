@@ -2,7 +2,8 @@
     <div class='col-xs-4'>
         <div class="panel panel-default">
           <div class="panel-body">
-            <p>Profile</p>
+            <center><img src="/Default-Avatar.jpg" height="200px" width="200px" class="rounded-img"></center>
+            <p><%= render '/components/stats' %></p>
           </div>
         </div>
     </div>
@@ -12,12 +13,12 @@
       <div class="panel panel-default post-panel">
         <div class="panel-body">
           <div class = "col-xs-1">
-            <img src="/fidget-spinner-black.jpg" height="50px" width="50px"></img>
+            <img src="/Default-Avatar.jpg" height="50px" width="50px"></img>
           </div>
           
           <div class "col-xs-11">
             <div class = "posts">
-              <p><%= User.find(@p.user_id).username %> <span class = "post-time"><%= @p.created_at.to_formatted_s(:short)%></span></p>
+              <a href = "/user/<%= User.find(@p.user_id).username %>"><%= User.find(@p.user_id).username %><span class = "post-time"> <%= @p.created_at.to_formatted_s(:short)%></span></a>
               <p><%= @p.content %></p>
             </div>
           </div>

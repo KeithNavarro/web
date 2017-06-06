@@ -1,15 +1,23 @@
 Rails.application.routes.draw do
   
-  resources :posts
   devise_for :users
+  resources :posts
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+  resources :relationships,       only: [:create, :destroy]
+  
   root 'pages#index'
   
+  get 'about' => 'info#about'
+
   get 'home' => 'pages#home'
 
-  get '/:id' => 'pages#profile'
+  get '/user/:id' => 'pages#profile'
 
   get 'explore' => 'pages#explore'
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

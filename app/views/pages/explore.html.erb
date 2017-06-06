@@ -1,2 +1,21 @@
-<h1>Pages#explore</h1>
-<p>Find me in app/views/pages/explore.html.erb</p>  
+<div class='row'>
+    <div class='col-xs-12'>
+      <%= render '/components/post_form' %>
+      <% for @p in @posts %>
+      <div class="panel panel-default post-panel">
+        <div class="panel-body">
+          <div class = "col-xs-1">
+            <img src="/Default-Avatar.jpg" height="50px" width="50px"></img>
+          </div>
+          
+          <div class "col-xs-11">
+            <div class = "posts">
+              <a href = "/user/<%= User.find(@p.user_id).username %>"><%= User.find(@p.user_id).username %><span class = "post-time"> <%= @p.created_at.to_formatted_s(:short)%></span></a>
+              <p><%= @p.content %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+</div>
