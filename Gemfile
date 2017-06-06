@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 ruby '2.3.0p0'
-rails '4.2.5'
 
 gem 'devise'
 # For Bootstrap / Twitter UI components
