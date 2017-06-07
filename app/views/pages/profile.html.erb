@@ -12,9 +12,11 @@
         </div>
     </div>
     <div class='col-xs-7'>
+      <!-- Only renders if the user is on their own profile. -->
       <% if current_user.username == User.find_by_username(params[:id]).username %>
         <%= render '/components/post_form' %>
       <% end %>
+      <!-- Ruby loop to trigger for all the posts necessary -->
       <% for @p in @posts %>
       <div class="panel panel-default post-panel">
         <div class="panel-body">
@@ -24,6 +26,7 @@
           
           <div class "col-xs-11">
             <div class = "posts">
+              <!-- Accesses database to find the post's user and created date -->
               <a href = "/user/<%= User.find(@p.user_id).username %>"><%= User.find(@p.user_id).username %><span class = "post-time"> <%= @p.created_at.to_formatted_s(:short)%></span></a>
               <p><%= @p.content %></p>
             </div>
