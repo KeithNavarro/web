@@ -10,8 +10,6 @@ Rails.application.routes.draw do
   resources :relationships,       only: [:create, :destroy]
   
   root 'pages#index'
-  
-  get 'about' => 'info#about'
 
   get 'home' => 'pages#home'
 
