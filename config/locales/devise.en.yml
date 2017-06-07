@@ -60,4 +60,5 @@ en:
       not_found: "not found"
       not_locked: "was not locked"
       not_saved:
+        one: "1 error was found"
         other: "%{count} errors were found"

@@ -1,5 +1,6 @@
 <div class='row'>
     <div class='col-xs-12'>
+      <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal"><span class= "glyphicon glyphicon-question-sign" aria-hidden="true"></span></button>
       <%= render '/components/post_form' %>
       <% for @p in @posts %>
       <div class="panel panel-default post-panel">
@@ -18,4 +19,27 @@
       </div>
       <% end %>
     </div>
+</div>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Explore The Network</h4>
+      </div>
+      <div class="modal-body">
+        <p>
+          Find some new people, make some new friends. On the Explore page, every single post by every single user is displayed for the world to see. From here you can view people’s profiles and maybe even give them a follow!
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
 </div>

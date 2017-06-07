@@ -1,5 +1,5 @@
 <center>
-  <h2>Sign up</h2>
+  <h2>Sign up</h2> <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal"><span class= "glyphicon glyphicon-question-sign" aria-hidden="true"></span></button>
   
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= devise_error_messages! %>
@@ -34,3 +34,26 @@
   
   <%= render "devise/shared/links" %>
 </center>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">First Time?</h4>
+      </div>
+      <div class="modal-body">
+        <p>
+         Fill in all fields with your information and then you’re good to go.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
