@@ -8,7 +8,6 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'rails', '4.2.5'
 # Use Heroku pg database
 gem 'pg'
-gem 'sqlite3'
 #Heroku pre-reqs
 gem 'rails_12factor', group: :production
 # Use SCSS for stylesheets
